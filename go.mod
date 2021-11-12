@@ -1,4 +1,4 @@
-module github.com/tskaard/fh-tibber
+module github.com/futurehomeno/edge-tibber-adapter
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
