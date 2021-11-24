@@ -6,11 +6,11 @@ import (
 
 	"github.com/tskaard/tibber-golang"
 
+	"github.com/futurehomeno/edge-tibber-adapter/model"
 	"github.com/futurehomeno/fimpgo"
 	"github.com/futurehomeno/fimpgo/edgeapp"
 	"github.com/futurehomeno/fimpgo/utils"
 	log "github.com/sirupsen/logrus"
-	"github.com/tskaard/fh-tibber/model"
 )
 
 // FimpTibberHandler structure

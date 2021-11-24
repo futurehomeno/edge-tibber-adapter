@@ -3,14 +3,15 @@ package main
 import (
 	"flag"
 	"fmt"
+	"time"
+
+	"github.com/futurehomeno/edge-tibber-adapter/handler"
+	"github.com/futurehomeno/edge-tibber-adapter/model"
+	"github.com/futurehomeno/edge-tibber-adapter/utils"
 	"github.com/futurehomeno/fimpgo"
 	"github.com/futurehomeno/fimpgo/discovery"
 	"github.com/futurehomeno/fimpgo/edgeapp"
 	log "github.com/sirupsen/logrus"
-	"github.com/tskaard/fh-tibber/handler"
-	"github.com/tskaard/fh-tibber/model"
-	"github.com/tskaard/fh-tibber/utils"
-	"time"
 )
 
 func main() {
@@ -76,8 +77,8 @@ func main() {
 		if err != nil {
 			// Handle error
 			appLifecycle.SetConnectionState(edgeapp.ConnStateDisconnected)
-			appLifecycle.SetLastError(fmt.Sprint("Can't connect to Tibber api . Err:",err.Error()))
-		}else {
+			appLifecycle.SetLastError(fmt.Sprint("Can't connect to Tibber api . Err:", err.Error()))
+		} else {
 			appLifecycle.SetConnectionState(edgeapp.ConnStateConnected)
 		}
 	}
